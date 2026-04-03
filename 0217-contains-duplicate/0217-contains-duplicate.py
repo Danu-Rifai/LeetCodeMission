@@ -1,5 +1,6 @@
 class Solution(object):
   def containsDuplicate(self, nums):
+    nums.sort()
     mySet = set()
     duplikat = set()
     for i in nums:
@@ -7,10 +8,9 @@ class Solution(object):
         mySet.add(i)
       else:
         duplikat.add(i)
+        break
       
     if duplikat:
       return True
     else:
       return False
-    
-    return status
